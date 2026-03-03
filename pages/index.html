@@ -2,10 +2,22 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Cloudflare Pages Deployment</title>
+  <title>Cloudflare Full Stack</title>
 </head>
 <body>
-  <h1>Cloudflare Pages Deployment Successful</h1>
-  <p>This site is deployed using Terraform.</p>
+  <h1>Cloudflare Frontend + Backend</h1>
+
+  <button onclick="callBackend()">Call Backend</button>
+
+  <p id="result"></p>
+
+  <script>
+    async function callBackend() {
+      const response = await fetch("https://gaurav-backend-worker.gauravjith1015.workers.dev");
+      const text = await response.text();
+      document.getElementById("result").innerText = text;
+    }
+  </script>
+
 </body>
 </html>

@@ -51,7 +51,7 @@ resource "cloudflare_pages_project" "frontend" {
 
     # Since terraform is inside terraform/ folder,
     # we go one level up to reach pages/
-    root_dir = "../pages"
+    root_dir = "pages"
 
     # Static HTML site → no build command needed
     build_command   = null
