@@ -5,3 +5,6 @@ terraform/.terraform/
 
 # Sensitive variables
 terraform/terraform.tfvars
+
+# Terraform lock file
+terraform/.terraform.lock.hcl
