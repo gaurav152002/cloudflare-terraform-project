@@ -2,22 +2,92 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Cloudflare Full Stack</title>
+  <title>Cloudflare Full Stack Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f38020, #ffb347);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 600px;
+    }
+
+    h1 {
+      color: #f38020;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      text-align: left;
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 15px 25px;
+      font-size: 18px;
+      background-color: #f38020;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e36b00;
+      transform: scale(1.05);
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-  <h1>Cloudflare Frontend + Backend</h1>
 
-  <button onclick="callBackend()">Call Backend</button>
+  <div class="card">
+    <h1>🚀 Project Completed Successfully</h1>
 
-  <p id="result"></p>
+    <p>This full-stack serverless application was deployed using:</p>
 
-  <script>
-    async function callBackend() {
-      const response = await fetch("https://gaurav-backend-worker.gauravjith1015.workers.dev");
-      const text = await response.text();
-      document.getElementById("result").innerText = text;
-    }
-  </script>
+    <ul>
+      <li>✔ Terraform (Infrastructure as Code)</li>
+      <li>✔ Cloudflare Workers (Backend)</li>
+      <li>✔ Cloudflare Pages (Frontend)</li>
+      <li>✔ GitHub Integration (CI/CD)</li>
+      <li>✔ CORS Configuration</li>
+      <li>✔ Global Edge Deployment</li>
+    </ul>
+
+    <a class="btn" href="https://gaurav-backend-worker.gauravjith1015.workers.dev" target="_blank">
+      🔥 Visit Backend (Hello API)
+    </a>
+
+    <div class="footer">
+      Deployed using Cloudflare Edge Network
+    </div>
+  </div>
 
 </body>
 </html>
