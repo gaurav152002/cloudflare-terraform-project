@@ -3,90 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <title>Cloudflare Full Stack Project</title>
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
       background: linear-gradient(135deg, #f38020, #ffb347);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      color: #333;
     }
 
     .card {
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 45px;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
       text-align: center;
-      max-width: 600px;
+      max-width: 700px;
+      width: 90%;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .badge {
+      display: inline-block;
+      background: #fff3e0;
+      color: #f38020;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-bottom: 15px;
+      font-weight: 600;
     }
 
     h1 {
+      margin: 10px 0 15px;
+      font-size: 28px;
       color: #f38020;
-      margin-bottom: 20px;
+    }
+
+    p.subtitle {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 25px;
     }
 
     ul {
       text-align: left;
-      margin: 20px 0;
-      padding-left: 20px;
+      margin: 20px auto;
+      padding-left: 0;
+      list-style: none;
+      max-width: 500px;
     }
 
-    li {
-      margin-bottom: 8px;
+    ul li {
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #f38020;
+      font-weight: bold;
     }
 
     .btn {
-      margin-top: 20px;
-      padding: 15px 25px;
+      margin-top: 25px;
+      padding: 16px 30px;
       font-size: 18px;
-      background-color: #f38020;
+      font-weight: bold;
+      background: linear-gradient(45deg, #f38020, #ff6a00);
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
       transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
     .btn:hover {
-      background-color: #e36b00;
-      transform: scale(1.05);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    }
+
+    .divider {
+      margin: 30px auto;
+      height: 1px;
+      width: 60%;
+      background: #ddd;
     }
 
     .footer {
-      margin-top: 25px;
+      margin-top: 15px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    .tech-stack {
+      margin-top: 10px;
       font-size: 14px;
-      color: #666;
+      color: #444;
+      font-weight: 500;
     }
   </style>
 </head>
+
 <body>
 
   <div class="card">
-    <h1>🚀 Project Completed Successfully</h1>
 
-    <p>This full-stack serverless application was deployed using:</p>
+    <div class="badge">Serverless • Edge • Infrastructure as Code</div>
+
+    <h1>🚀 Full Stack Cloudflare Deployment</h1>
+
+    <p class="subtitle">
+      A production-style deployment using modern cloud and DevOps practices.
+    </p>
 
     <ul>
-      <li>✔ Terraform (Infrastructure as Code)</li>
-      <li>✔ Cloudflare Workers (Backend)</li>
-      <li>✔ Cloudflare Pages (Frontend)</li>
-      <li>✔ GitHub Integration (CI/CD)</li>
-      <li>✔ CORS Configuration</li>
-      <li>✔ Global Edge Deployment</li>
+      <li>Terraform (Infrastructure as Code)</li>
+      <li>Cloudflare Workers (Backend API)</li>
+      <li>Cloudflare Pages (Frontend Hosting)</li>
+      <li>GitHub Integration (CI/CD)</li>
+      <li>Global Edge Deployment</li>
     </ul>
 
-    <a class="btn" href="https://gaurav-backend-worker.gauravjith1015.workers.dev" target="_blank">
-      🔥 Visit Backend (Hello API)
+    <a class="btn" 
+       href="https://gaurav-backend-worker.gauravjith1015.workers.dev" 
+       target="_blank">
+       🔥 Visit Backend API
     </a>
 
-    <div class="footer">
-      Deployed using Cloudflare Edge Network
+    <div class="divider"></div>
+
+    <div class="tech-stack">
+      Deployed on Cloudflare Global Edge Network
     </div>
+
+    <div class="footer">
+      © 2026 | Built as part of Cloudflare Workers & Pages Terraform Project
+    </div>
+
   </div>
 
 </body>

@@ -16,7 +16,6 @@ User → Cloudflare Pages (Frontend) → Cloudflare Worker (Backend) → Respons
 - Cloudflare Workers (Serverless Backend)
 - Cloudflare Pages (Frontend Hosting)
 - GitHub (CI/CD Integration)
-- CORS Configuration
 - Workers.dev Subdomain
 
 ---
@@ -27,7 +26,6 @@ User → Cloudflare Pages (Frontend) → Cloudflare Worker (Backend) → Respons
 - Deployed using `cloudflare_workers_script`
 - Runs on Cloudflare Edge Network
 - Returns HTTP response from serverless function
-- CORS enabled for frontend integration
 
 Backend URL:https://gaurav-backend-worker.gauravjith1015.workers.dev/
 
